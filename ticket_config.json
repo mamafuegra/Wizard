@@ -1,0 +1,61 @@
+{
+    "1404054649627217941": {
+        "category_id": 1413884680096186379,
+        "panel_channel_id": 1413883078522437762,
+        "title": "Ticket Help",
+        "description": "Welcome to our ticket support",
+        "button_label": "Create Ticket",
+        "color": 5793266,
+        "options": [
+            "giveway",
+            "mouse"
+        ],
+        "intents": [],
+        "ticket_mod": null,
+        "log_channel_id": null,
+        "panel_message_id": 1413886376805662780
+    },
+    "1401986214185275474": {
+        "category_id": 1405550021319069747,
+        "panel_channel_id": 1405550023743246346,
+        "title": "Ticket Help",
+        "description": "Wizard ticket help menu!",
+        "button_label": "Create Ticket",
+        "color": 5793266,
+        "options": [],
+        "intents": [],
+        "ticket_mod": null,
+        "log_channel_id": null,
+        "panel_message_id": 1405550026146713794
+    },
+    "1132305848832643133": {
+        "category_id": 1413901865933869227,
+        "panel_channel_id": 1406261524137382039,
+        "title": "**Wizard support ticket**",
+        "description": "If you need any assistance click on the button corresponding to the type of ticket you wish to open.",
+        "button_label": "Create Ticket",
+        "color": 5793266,
+        "options": [],
+        "intents": [],
+        "ticket_mod": 1405636468713717800,
+        "log_channel_id": null,
+        "panel_message_id": 1406261873485287560
+    },
+    "1193999450578878494": {
+        "category_id": 1402968571059114115,
+        "panel_channel_id": 1402709956859265227,
+        "title": "Ticket Help",
+        "description": ">>> \ud801\ude5a \u1d07-\u0280\u1d0f\u1d0d\u1d00\u0274\u1d04\u1d07 \u2122 Help booth.",
+        "button_label": "Create Ticket",
+        "color": 5793266,
+        "options": [
+            "giveway",
+            "help",
+            "staff application"
+        ],
+        "intents": [],
+        "ticket_mod": 1362498470417797494,
+        "log_channel_id": null,
+        "panel_message_id": 1413886827202347100
+    }
+}

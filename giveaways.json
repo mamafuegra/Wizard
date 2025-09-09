@@ -1,0 +1,66 @@
+{
+  "1404054649627217941": {
+    "1406659771003830322": {
+      "title": "**1 mon Nitro**",
+      "description": ">>> requirment",
+      "winner_count": "2",
+      "winner_limit": 2,
+      "end_time": 1786960423,
+      "participants": [],
+      "ended": false,
+      "winners": [],
+      "creator_id": 386889350010634252,
+      "channel_id": 1405611441343696988,
+      "leave_enabled": true
+    },
+    "1406660321875202079": {
+      "title": "hi",
+      "description": "hi",
+      "winner_count": "1",
+      "winner_limit": 1,
+      "end_time": 1755424585,
+      "participants": [
+        "386889350010634252"
+      ],
+      "ended": true,
+      "winners": [
+        "386889350010634252"
+      ],
+      "creator_id": 386889350010634252,
+      "channel_id": 1405611441343696988,
+      "leave_enabled": true
+    },
+    "1406662548962414683": {
+      "title": "**1mon Nitro**",
+      "description": ">>> 1mon of nitro worth 9$",
+      "winner_count": "1",
+      "winner_limit": 1,
+      "end_time": 1755425145,
+      "participants": [
+        "386889350010634252"
+      ],
+      "ended": true,
+      "winners": [
+        "386889350010634252"
+      ],
+      "creator_id": 386889350010634252,
+      "channel_id": 1405611441343696988,
+      "leave_enabled": true
+    }
+  },
+  "1132305848832643133": {
+    "1406686417786114168": {
+      "title": "*Wizard bot 1mon premium*",
+      "description": ">>> get 1mon of premium feature",
+      "winner_count": "3",
+      "winner_limit": 3,
+      "end_time": 1755517176,
+      "participants": [],
+      "ended": false,
+      "winners": [],
+      "creator_id": 386889350010634252,
+      "channel_id": 1406255850980638751,
+      "leave_enabled": true
+    }
+  }
+}

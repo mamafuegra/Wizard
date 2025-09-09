@@ -1,0 +1,6 @@
+{
+  "client_id": "e90e80ecde3145a3beb5e02980f1bad6",
+  "client_secret": "edd6cee9fe3b433d99b18590a2d0d3b3",
+  "redirect_uri": "https://wizardspell.netlify.app/spotify",
+  "scope": "user-read-playback-state user-modify-playback-state user-read-currently-playing user-library-modify user-library-read user-top-read"
+}

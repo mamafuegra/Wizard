@@ -1,0 +1,90 @@
+{
+  "1404054649627217941": {
+    "enabled": true,
+    "categories": {
+      "mass_mention": {
+        "enabled": true,
+        "threshold": 2,
+        "action": "kick",
+        "timeout_seconds": 600
+      },
+      "mass_kick": {
+        "enabled": true,
+        "threshold": 1,
+        "action": "kick",
+        "timeout_seconds": 600
+      },
+      "mass_ban": {
+        "enabled": true,
+        "threshold": 1,
+        "action": "kick",
+        "timeout_seconds": 600
+      },
+      "link_post": {
+        "enabled": true,
+        "threshold": 100,
+        "action": "timeout",
+        "timeout_seconds": 120
+      },
+      "create_channel": {
+        "enabled": true,
+        "threshold": 1,
+        "action": "kick",
+        "timeout_seconds": 600
+      },
+      "delete_channel": {
+        "enabled": true,
+        "threshold": 1,
+        "action": "kick",
+        "timeout_seconds": 600
+      },
+      "give_role": {
+        "enabled": true,
+        "threshold": 1,
+        "action": "kick",
+        "timeout_seconds": 600
+      },
+      "create_role": {
+        "enabled": true,
+        "threshold": 1,
+        "action": "kick",
+        "timeout_seconds": 600
+      },
+      "delete_role": {
+        "enabled": true,
+        "threshold": 1,
+        "action": "kick",
+        "timeout_seconds": 600
+      },
+      "create_webhook": {
+        "enabled": true,
+        "threshold": 1,
+        "action": "kick",
+        "timeout_seconds": 600
+      },
+      "delete_webhook": {
+        "enabled": true,
+        "threshold": 1,
+        "action": "kick",
+        "timeout_seconds": 600
+      },
+      "bot_add": {
+        "enabled": true,
+        "threshold": 1,
+        "action": "kick",
+        "timeout_seconds": 600
+      }
+    },
+    "antinuke_mods": [
+      "1057290319500161044"
+    ],
+    "specific_mods": {
+      "mass_mention": [
+        "1412138198657794099"
+      ],
+      "link_post": [
+        "1412138198657794099"
+      ]
+    }
+  }
+}

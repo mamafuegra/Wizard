@@ -1,0 +1,24 @@
+{
+  "1401986214185275474": {
+    "activated_by": 386889350010634252,
+    "activated_at": 1755195097,
+    "expires_at": 1786299097,
+    "features": {
+      "ai_enabled": true
+    }
+  },
+  "1404054649627217941": {
+    "activated_by": 386889350010634252,
+    "activated_at": 1755196147,
+    "expires_at": 1786300147,
+    "features": {
+      "ai_enabled": true
+    }
+  },
+  "1132305848832643133": {
+    "activated_by": 386889350010634252,
+    "activated_at": 1755197927,
+    "expires_at": 1786301927,
+    "features": {}
+  }
+}

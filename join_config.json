@@ -1,0 +1,20 @@
+{
+    "1404054649627217941": {
+        "human_enabled": true,
+        "bot_enabled": true,
+        "human_role_ids": [
+            1405210306518585427
+        ],
+        "bot_role_ids": [
+            1404081837369720892
+        ]
+    },
+    "1132305848832643133": {
+        "human_enabled": true,
+        "bot_enabled": false,
+        "human_role_ids": [
+            1405636430872449104
+        ],
+        "bot_role_ids": []
+    }
+}

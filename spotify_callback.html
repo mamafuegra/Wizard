@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Authorization - Wizard Bot</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1DB954, #191414);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 500px;
+            width: 90%;
+        }
+        .logo {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0 0 20px 0;
+            font-size: 2em;
+        }
+        .status {
+            font-size: 1.2em;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .success {
+            background: rgba(46, 204, 113, 0.3);
+            border: 1px solid #2ecc71;
+        }
+        .error {
+            background: rgba(231, 76, 60, 0.3);
+            border: 1px solid #e74c3c;
+        }
+        .code-display {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            margin: 20px 0;
+            word-break: break-all;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .instructions {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .instructions ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin: 8px 0;
+        }
+        .copy-btn {
+            background: #1DB954;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 10px 5px;
+            transition: background 0.3s;
+        }
+        .copy-btn:hover {
+            background: #1ed760;
+        }
+        .back-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 10px 5px;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🧙‍♂️</div>
+        <h1>Wizard Bot Spotify Authorization</h1>
+        
+        <div id="content">
+            <!-- Content will be populated by JavaScript -->
+        </div>
+        
+        <div class="footer">
+            <p>Powered by Wizard Bot • <a href="https://wizardspell.netlify.app/" style="color: #1DB954;">Visit Website</a></p>
+        </div>
+    </div>
+
+    <script>
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Code copied to clipboard!');
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+                // Fallback for older browsers
+                var textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('Code copied to clipboard!');
+            });
+        }
+
+        function displayContent() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code');
+            const error = urlParams.get('error');
+            const state = urlParams.get('state');
+
+            const contentDiv = document.getElementById('content');
+
+            if (error) {
+                contentDiv.innerHTML = `
+                    <div class="status error">
+                        <strong>❌ Authorization Failed</strong><br>
+                        Error: ${error}
+                    </div>
+                    <p>There was an error authorizing your Spotify account. Please try again.</p>
+                    <a href="javascript:history.back()" class="back-btn">Go Back</a>
+                `;
+            } else if (code) {
+                contentDiv.innerHTML = `
+                    <div class="status success">
+                        <strong>✅ Authorization Successful!</strong><br>
+                        Your Spotify account has been authorized.
+                    </div>
+                    
+                    <div class="instructions">
+                        <h3>Next Steps:</h3>
+                        <ol>
+                            <li>Copy the authorization code below</li>
+                            <li>Go back to Discord</li>
+                            <li>Type: <code>!spotify auth [paste code here]</code></li>
+                            <li>Your Spotify will be connected to the bot!</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="code-display" id="authCode">
+                        ${code}
+                    </div>
+                    
+                    <button class="copy-btn" onclick="copyToClipboard('${code}')">
+                        📋 Copy Code
+                    </button>
+                    
+                    <a href="https://discord.com/app" class="back-btn" target="_blank">
+                        🚀 Open Discord
+                    </a>
+                `;
+            } else {
+                contentDiv.innerHTML = `
+                    <div class="status error">
+                        <strong>❌ No Authorization Data</strong>
+                    </div>
+                    <p>No authorization code or error was found in the URL. Please try the authorization process again.</p>
+                    <a href="javascript:history.back()" class="back-btn">Go Back</a>
+                `;
+            }
+        }
+
+        // Run when page loads
+        displayContent();
+    </script>
+</body>
+</html>
+
+

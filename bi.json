@@ -1,0 +1,835 @@
+{
+  "generated_at": "2025-08-14T15:59:21.954017+00:00",
+  "root": "wizard",
+  "totals": {
+    "python_files": 20,
+    "physical_lines": 6775,
+    "code_lines": 5731,
+    "functions": 338,
+    "classes": 25,
+    "unique_imports": 20
+  },
+  "imports": {
+    "by_module": {
+      "aiohttp": {
+        "files_using": 3
+      },
+      "ast": {
+        "files_using": 2
+      },
+      "asyncio": {
+        "files_using": 3
+      },
+      "cmds": {
+        "files_using": 1
+      },
+      "collections": {
+        "files_using": 2
+      },
+      "datetime": {
+        "files_using": 7
+      },
+      "discord": {
+        "files_using": 17
+      },
+      "dotenv": {
+        "files_using": 1
+      },
+      "io": {
+        "files_using": 2
+      },
+      "json": {
+        "files_using": 17
+      },
+      "os": {
+        "files_using": 12
+      },
+      "platform": {
+        "files_using": 2
+      },
+      "random": {
+        "files_using": 2
+      },
+      "re": {
+        "files_using": 6
+      },
+      "sys": {
+        "files_using": 2
+      },
+      "time": {
+        "files_using": 1
+      },
+      "traceback": {
+        "files_using": 1
+      },
+      "typing": {
+        "files_using": 16
+      },
+      "urllib": {
+        "files_using": 1
+      },
+      "utils": {
+        "files_using": 13
+      }
+    },
+    "all": [
+      "aiohttp",
+      "ast",
+      "asyncio",
+      "cmds",
+      "collections",
+      "datetime",
+      "discord",
+      "dotenv",
+      "io",
+      "json",
+      "os",
+      "platform",
+      "random",
+      "re",
+      "sys",
+      "time",
+      "traceback",
+      "typing",
+      "urllib",
+      "utils"
+    ]
+  },
+  "files": [
+    {
+      "path": "bi_update.py",
+      "physical_lines": 227,
+      "code_lines": 185,
+      "num_functions": 9,
+      "num_classes": 0,
+      "functions": [
+        "is_python_file",
+        "read_text_safely",
+        "count_code_lines",
+        "extract_imports",
+        "extract_definitions",
+        "gather_file_stats",
+        "walk_python_files",
+        "aggregate_stats",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "ast",
+        "datetime",
+        "json",
+        "os",
+        "typing"
+      ]
+    },
+    {
+      "path": "cmds/__init__.py",
+      "physical_lines": 1,
+      "code_lines": 0,
+      "num_functions": 0,
+      "num_classes": 0,
+      "functions": [],
+      "classes": [],
+      "imports": []
+    },
+    {
+      "path": "cmds/antinuke.py",
+      "physical_lines": 611,
+      "code_lines": 527,
+      "num_functions": 33,
+      "num_classes": 1,
+      "functions": [
+        "load_config",
+        "save_config",
+        "is_second_owner",
+        "setup",
+        "__init__",
+        "guild_conf",
+        "can_configure",
+        "is_whitelisted",
+        "punish",
+        "bump_counter",
+        "antinuke_group",
+        "antinuke_enable",
+        "antinuke_disable",
+        "antinuke_status",
+        "antinuke_config_cmd",
+        "antinuke_set_alias",
+        "_handle_freeform_config",
+        "antinuke_whitelist",
+        "antinuke_whitelist_add",
+        "antinuke_whitelist_remove",
+        "parse_duration_seconds",
+        "on_message",
+        "_maybe_punish_audit",
+        "on_guild_channel_create",
+        "on_guild_channel_delete",
+        "on_guild_role_create",
+        "on_guild_role_delete",
+        "on_member_update",
+        "on_webhooks_update",
+        "on_member_join",
+        "on_member_ban",
+        "on_member_remove",
+        "quote"
+      ],
+      "classes": [
+        "AntiNuke"
+      ],
+      "imports": [
+        "collections",
+        "datetime",
+        "discord",
+        "json",
+        "os",
+        "re",
+        "typing",
+        "utils"
+      ]
+    },
+    {
+      "path": "cmds/automod.py",
+      "physical_lines": 519,
+      "code_lines": 444,
+      "num_functions": 35,
+      "num_classes": 1,
+      "functions": [
+        "load_config",
+        "save_config",
+        "parse_duration",
+        "is_second_owner",
+        "setup",
+        "__init__",
+        "can_configure",
+        "guild_conf",
+        "automod_group",
+        "automod_words",
+        "words_enable",
+        "words_disable",
+        "words_add",
+        "words_remove",
+        "words_list",
+        "automod_spam",
+        "spam_enable",
+        "spam_disable",
+        "spam_rate",
+        "spam_timeout",
+        "spam_set",
+        "spam_purge",
+        "automod_spams",
+        "automod_spams_enable",
+        "automod_repeat",
+        "repeat_enable",
+        "repeat_disable",
+        "repeat_threshold",
+        "automod_repeats",
+        "automod_repeats_enable",
+        "automod_mod",
+        "automod_bypass",
+        "automod_status",
+        "on_message",
+        "quote"
+      ],
+      "classes": [
+        "AutoMod"
+      ],
+      "imports": [
+        "collections",
+        "datetime",
+        "discord",
+        "json",
+        "os",
+        "re",
+        "typing",
+        "utils"
+      ]
+    },
+    {
+      "path": "cmds/emoji.py",
+      "physical_lines": 144,
+      "code_lines": 115,
+      "num_functions": 5,
+      "num_classes": 1,
+      "functions": [
+        "is_second_owner",
+        "setup",
+        "__init__",
+        "_can_manage_emojis",
+        "steal"
+      ],
+      "classes": [
+        "EmojiTools"
+      ],
+      "imports": [
+        "aiohttp",
+        "discord",
+        "json",
+        "re",
+        "typing"
+      ]
+    },
+    {
+      "path": "cmds/fun.py",
+      "physical_lines": 457,
+      "code_lines": 405,
+      "num_functions": 30,
+      "num_classes": 1,
+      "functions": [
+        "setup",
+        "__init__",
+        "_load_json",
+        "_save_nsfw_conf",
+        "_guild_nsfw",
+        "_reply_embed",
+        "_pick",
+        "_is_nsfw_allowed",
+        "_looks_like_video",
+        "_validate_video_url",
+        "_fetch_tenor_gif",
+        "_download_bytes",
+        "bully",
+        "slap",
+        "punch",
+        "gore",
+        "nsfw",
+        "nsfw_enable",
+        "nsfw_send",
+        "_is_admin_owner_or_sso",
+        "nsfw_add",
+        "nsfw_bulk",
+        "nsfw_list",
+        "gay_porn",
+        "lesbian_porn",
+        "transporn",
+        "hentai",
+        "gay_rate",
+        "trans_rate",
+        "fuck"
+      ],
+      "classes": [
+        "Fun"
+      ],
+      "imports": [
+        "aiohttp",
+        "discord",
+        "io",
+        "json",
+        "os",
+        "random",
+        "re",
+        "typing",
+        "urllib",
+        "utils"
+      ]
+    },
+    {
+      "path": "cmds/info.py",
+      "physical_lines": 287,
+      "code_lines": 216,
+      "num_functions": 9,
+      "num_classes": 1,
+      "functions": [
+        "setup",
+        "__init__",
+        "format_dt",
+        "server_info",
+        "user_info",
+        "botinfo_cmd",
+        "quote",
+        "quote",
+        "quote"
+      ],
+      "classes": [
+        "Info"
+      ],
+      "imports": [
+        "ast",
+        "datetime",
+        "discord",
+        "os",
+        "platform",
+        "sys",
+        "typing",
+        "utils"
+      ]
+    },
+    {
+      "path": "cmds/jail.py",
+      "physical_lines": 504,
+      "code_lines": 387,
+      "num_functions": 17,
+      "num_classes": 1,
+      "functions": [
+        "setup",
+        "__init__",
+        "load_jailed_users",
+        "save_jailed_users",
+        "load_jail_config",
+        "save_jail_config",
+        "jail_user",
+        "jail_status",
+        "unjail_user",
+        "list_jailed",
+        "setup_jail",
+        "unset_jail",
+        "jail_error",
+        "unjail_error",
+        "setup_jail_error",
+        "unset_jail_error",
+        "quote"
+      ],
+      "classes": [
+        "Jail"
+      ],
+      "imports": [
+        "discord",
+        "json",
+        "os",
+        "utils"
+      ]
+    },
+    {
+      "path": "cmds/join.py",
+      "physical_lines": 206,
+      "code_lines": 174,
+      "num_functions": 19,
+      "num_classes": 1,
+      "functions": [
+        "load_config",
+        "save_config",
+        "is_second_owner",
+        "is_owner_or_sso",
+        "setup",
+        "__init__",
+        "_guild_conf",
+        "_reply",
+        "join_group",
+        "join_human",
+        "join_human_add",
+        "join_human_remove",
+        "join_human_disable",
+        "join_bot",
+        "join_bot_add",
+        "join_bot_remove",
+        "join_bot_disable",
+        "join_status",
+        "on_member_join"
+      ],
+      "classes": [
+        "JoinRoles"
+      ],
+      "imports": [
+        "discord",
+        "json",
+        "os",
+        "typing",
+        "utils"
+      ]
+    },
+    {
+      "path": "cmds/manage.py",
+      "physical_lines": 128,
+      "code_lines": 107,
+      "num_functions": 10,
+      "num_classes": 1,
+      "functions": [
+        "is_second_owner",
+        "is_admin_owner_or_sso",
+        "setup",
+        "__init__",
+        "_target_channel",
+        "_reply",
+        "hide",
+        "unhide",
+        "lock",
+        "unlock"
+      ],
+      "classes": [
+        "Manage"
+      ],
+      "imports": [
+        "discord",
+        "json",
+        "typing",
+        "utils"
+      ]
+    },
+    {
+      "path": "cmds/nickname.py",
+      "physical_lines": 85,
+      "code_lines": 69,
+      "num_functions": 5,
+      "num_classes": 1,
+      "functions": [
+        "is_admin_owner_or_sso",
+        "setup",
+        "__init__",
+        "change_nick",
+        "send_embed"
+      ],
+      "classes": [
+        "Nickname"
+      ],
+      "imports": [
+        "discord",
+        "json",
+        "typing"
+      ]
+    },
+    {
+      "path": "cmds/owner_tools.py",
+      "physical_lines": 912,
+      "code_lines": 843,
+      "num_functions": 17,
+      "num_classes": 1,
+      "functions": [
+        "setup",
+        "__init__",
+        "is_owner",
+        "is_second_owner",
+        "is_admin_owner_or_sso",
+        "parse_duration",
+        "build_version_report",
+        "ban_cmd",
+        "kick_cmd",
+        "unban_cmd",
+        "mute_cmd",
+        "unmute_cmd",
+        "strip_cmd",
+        "on_message",
+        "_get",
+        "_get",
+        "_get"
+      ],
+      "classes": [
+        "OwnerTools"
+      ],
+      "imports": [
+        "aiohttp",
+        "cmds",
+        "datetime",
+        "discord",
+        "json",
+        "platform",
+        "sys",
+        "typing"
+      ]
+    },
+    {
+      "path": "cmds/purge.py",
+      "physical_lines": 173,
+      "code_lines": 149,
+      "num_functions": 7,
+      "num_classes": 1,
+      "functions": [
+        "is_admin_owner_or_sso",
+        "setup",
+        "__init__",
+        "purge_cmd",
+        "on_message",
+        "quote",
+        "check"
+      ],
+      "classes": [
+        "Purge"
+      ],
+      "imports": [
+        "discord",
+        "io",
+        "json",
+        "typing",
+        "utils"
+      ]
+    },
+    {
+      "path": "cmds/ticket.py",
+      "physical_lines": 729,
+      "code_lines": 603,
+      "num_functions": 34,
+      "num_classes": 4,
+      "functions": [
+        "load_config",
+        "save_config",
+        "setup",
+        "__init__",
+        "__init__",
+        "interaction_check",
+        "delete_button",
+        "claim_button",
+        "close_button",
+        "transcript_button",
+        "log_ticket_action",
+        "build_transcript_embed",
+        "generate_transcript",
+        "__init__",
+        "_reply_embed",
+        "save",
+        "is_admin_owner_or_sso",
+        "ticket_group",
+        "ticket_set",
+        "ticket_status",
+        "ticket_send",
+        "send_or_update_panel",
+        "ticket_mod",
+        "ticket_log",
+        "on_interaction",
+        "ticket_description",
+        "ticket_title",
+        "ticket_hex",
+        "ticket_option",
+        "ticket_intent",
+        "on_message",
+        "ticketcfg",
+        "on_submit",
+        "slugify_username"
+      ],
+      "classes": [
+        "TicketPanel",
+        "TicketActionView",
+        "Ticket",
+        "ReasonModal"
+      ],
+      "imports": [
+        "asyncio",
+        "datetime",
+        "discord",
+        "json",
+        "os",
+        "re",
+        "typing",
+        "utils"
+      ]
+    },
+    {
+      "path": "cmds/vanity.py",
+      "physical_lines": 333,
+      "code_lines": 288,
+      "num_functions": 25,
+      "num_classes": 1,
+      "functions": [
+        "load_config",
+        "save_config",
+        "setup",
+        "__init__",
+        "_is_guild_owner_or_second_owner",
+        "_get_guild_conf",
+        "_require_vanity_enabled",
+        "_reply_embed",
+        "_extract_custom_status_text",
+        "vanity_group",
+        "vanity_enable",
+        "vanity_disable",
+        "vanity_role",
+        "vanity_message",
+        "vanity_message_send",
+        "vanity_status",
+        "booster_group",
+        "booster_enable",
+        "booster_disable",
+        "booster_message",
+        "booster_status",
+        "on_presence_update",
+        "on_member_update",
+        "_enforce_vanity_loop",
+        "_wait_for_ready"
+      ],
+      "classes": [
+        "Vanity"
+      ],
+      "imports": [
+        "discord",
+        "json",
+        "os",
+        "time",
+        "typing",
+        "utils"
+      ]
+    },
+    {
+      "path": "cmds/voicemaster.py",
+      "physical_lines": 494,
+      "code_lines": 436,
+      "num_functions": 35,
+      "num_classes": 7,
+      "functions": [
+        "setup",
+        "__init__",
+        "interaction_check",
+        "lock",
+        "unlock",
+        "reveal",
+        "hide",
+        "rename",
+        "claim",
+        "delete",
+        "_channel_and_members",
+        "kick_member",
+        "ban_member",
+        "unban_member",
+        "set_limit",
+        "__init__",
+        "load_config",
+        "save_config",
+        "build_panel",
+        "get_join_channel_id",
+        "create_temporary_channel",
+        "on_voice_state_update",
+        "vm_set",
+        "vm_status",
+        "__init__",
+        "on_submit",
+        "__init__",
+        "on_submit",
+        "__init__",
+        "on_submit",
+        "__init__",
+        "on_submit",
+        "__init__",
+        "on_submit",
+        "quote"
+      ],
+      "classes": [
+        "VoicePanel",
+        "VoiceMaster",
+        "RenameModal",
+        "KickModal",
+        "BanModal",
+        "UnbanModal",
+        "SetLimitModal"
+      ],
+      "imports": [
+        "asyncio",
+        "discord",
+        "json",
+        "re",
+        "typing",
+        "utils"
+      ]
+    },
+    {
+      "path": "cmds/wlcm.py",
+      "physical_lines": 284,
+      "code_lines": 253,
+      "num_functions": 20,
+      "num_classes": 1,
+      "functions": [
+        "load_config",
+        "save_config",
+        "is_second_owner",
+        "setup",
+        "__init__",
+        "is_admin_owner_or_sso",
+        "welcome_group",
+        "welcome_set",
+        "welcome_mode",
+        "welcome_remove",
+        "welcome_message",
+        "welcome_title",
+        "welcome_description",
+        "welcome_footer",
+        "welcome_banner",
+        "welcome_color",
+        "welcome_status",
+        "welcome_mod",
+        "setwelcome",
+        "quote"
+      ],
+      "classes": [
+        "WelcomeConfig"
+      ],
+      "imports": [
+        "discord",
+        "json",
+        "os",
+        "typing",
+        "utils"
+      ]
+    },
+    {
+      "path": "main.py",
+      "physical_lines": 504,
+      "code_lines": 393,
+      "num_functions": 18,
+      "num_classes": 0,
+      "functions": [
+        "get_prefix",
+        "is_second_owner",
+        "on_ready",
+        "on_message",
+        "quote",
+        "insult",
+        "cast",
+        "potion",
+        "prefix",
+        "secondowner",
+        "set_second_owner",
+        "view_second_owner",
+        "sso",
+        "remove_second_owner",
+        "remove_cmd",
+        "help_command",
+        "load_extensions",
+        "main"
+      ],
+      "classes": [],
+      "imports": [
+        "asyncio",
+        "datetime",
+        "discord",
+        "dotenv",
+        "json",
+        "os",
+        "random",
+        "traceback",
+        "utils"
+      ]
+    },
+    {
+      "path": "utils/formatting.py",
+      "physical_lines": 12,
+      "code_lines": 8,
+      "num_functions": 2,
+      "num_classes": 0,
+      "functions": [
+        "quote",
+        "quote_lines"
+      ],
+      "classes": [],
+      "imports": []
+    },
+    {
+      "path": "welcome.py",
+      "physical_lines": 165,
+      "code_lines": 129,
+      "num_functions": 8,
+      "num_classes": 1,
+      "functions": [
+        "setup",
+        "__init__",
+        "load_config",
+        "save_config",
+        "format_template",
+        "get_guild_conf",
+        "on_member_join",
+        "can_send"
+      ],
+      "classes": [
+        "Welcome"
+      ],
+      "imports": [
+        "discord",
+        "json",
+        "os",
+        "typing"
+      ]
+    }
+  ],
+  "totals_delta": {
+    "unique_imports": 0,
+    "code_lines": 0,
+    "physical_lines": 0,
+    "classes": 0,
+    "functions": 0,
+    "python_files": 0
+  }
+}

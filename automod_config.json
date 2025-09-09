@@ -1,0 +1,36 @@
+{
+  "1404054649627217941": {
+    "words": {
+      "enabled": true,
+      "list": [
+        "bc"
+      ]
+    },
+    "spam": {
+      "enabled": true,
+      "threshold": 3,
+      "timeout_seconds": 60
+    },
+    "repeat": {
+      "enabled": true,
+      "threshold": 2
+    },
+    "bypass_staff": true
+  },
+  "1401986214185275474": {
+    "words": {
+      "enabled": false,
+      "list": []
+    },
+    "spam": {
+      "enabled": false,
+      "threshold": 5,
+      "timeout_seconds": 600
+    },
+    "repeat": {
+      "enabled": false,
+      "threshold": 5
+    },
+    "bypass_staff": true
+  }
+}
