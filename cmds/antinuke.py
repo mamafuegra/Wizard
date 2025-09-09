@@ -333,7 +333,7 @@ class AntiNuke(commands.Cog):
             pass
         await ctx.message.add_reaction('✅')
 
-    @antinuke_group.command(name='mod')
+    @antinuke_group.command(name='setmod')
     async def antinuke_mod(self, ctx: commands.Context, role: discord.Role):
         """Set antinuke mod role"""
         if not self.can_configure(ctx):
